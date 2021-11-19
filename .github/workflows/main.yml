@@ -1,14 +1,14 @@
 name: Github Actions Demo
-  on:
-    push:
-      branches:
-        - master
-  jobs:
-    echo-hello:
-      name: echo_hello
-      runs-on: ubuntu-latest
-      env:
-        USERNAME: zhaosi
-      run: |
-        echo $USERNAME hello world!
-
+on:
+  push:
+    branches:
+      - master
+jobs:
+  echo-hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello World
+        env:
+          USERNAME: zhaosi
+        run: |
+          echo $USERNAME Hello World!
