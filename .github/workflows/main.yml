@@ -1,0 +1,14 @@
+name: Github Actions Demo
+  on:
+    push:
+      branches:
+        - master
+  jobs:
+    echo-hello:
+      name: echo_hello
+      runs-on: ubuntu-latest
+      env:
+        USERNAME: zhaosi
+      run: |
+        echo $USERNAME hello world!
+
